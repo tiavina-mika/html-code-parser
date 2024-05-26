@@ -9,14 +9,13 @@
  *
  */
 
-import parseHtml, { HtmlCodeParserOptions } from "./Parse";
+import parseHtml from "./Parse";
+import { HtmlCodeParserProps } from "./type";
 
 // ------------------------------ //
 // ----- use it as component ---- //
 // ------------------------------ //
-export type HtmlCodeParserProps = {
-  children: string;
-} & HtmlCodeParserOptions;
+
 const HtmlCodeParser = ({ codeContainerClassName, language, children }: HtmlCodeParserProps) => {
   return parseHtml(children, { codeContainerClassName, language })
 }
