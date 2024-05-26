@@ -11,8 +11,6 @@
 
 <details>
 
-- [Demo](#demo)
-
 - [Installation](#installation)
 
 - [Get started](#get-started)
@@ -28,7 +26,6 @@
 ## Demo
 
 Try it yourself in this **[CodeSandbox live demo](https://codesandbox.io/s/github/tiavina-mika/mui-tiptap-editor-demo)**
-
 
 <img alt="Screenshot" src="https://github.com/tiavina-mika/mui-tiptap-editor/blob/main/screenshots/screenshot.png" />
 
