@@ -1,14 +1,16 @@
 import parseHtml, { HtmlCodeParser } from '../Parse'
 
+const html = `<p><h1>Hello there</h1><code>console.log("Using it as a component")</code></p>`;
+
 const App = () => {
   return (
     <div>
-      {parseHtml('<p><h1>Hello there</h1><code>console.log("Hello, World!")</code></p>')}
+      {parseHtml(html)}
       <HtmlCodeParser language="typescript" codeContainerClassName="custom-class">
-        {`<p><h1>Hello there</h1><code>console.log("Using it as a component")</code></p>`}
+        {html}
       </HtmlCodeParser>
     </div>
   )
 }
 
-export default App
+export default App;
