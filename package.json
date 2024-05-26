@@ -1,7 +1,7 @@
 {
   "name": "html-code-parser",
   "version": "0.0.1",
-  "description": "Easy to use Tiptap WYSIWYG rich text editor using Material UI (MUI) for React",
+  "description": "HTML parser to React component built on the top of html-react-parser with code syntax highlighting",
   "keywords": [
     "tiptap",
     "prosemirror",
