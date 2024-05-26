@@ -1,37 +1,19 @@
+import { parseHtml, HtmlCodeParser } from "html-code-parser";
 
-import { Container, CssBaseline, Tab, Tabs } from '@mui/material';
-import { SyntheticEvent, useState } from 'react';
-import { TextEditor } from 'mui-tiptap-editor';
-
-const tabs = [
-  'Simple',
-];
-
+const html = `<p><h1>Hello there</h1><code>console.log("Using it as a component")</code></p>`;
 
 const App = () => {
-  const [tab, setTab] = useState<number>(0);
-
-  const handleChange = (_: SyntheticEvent, newValue: number) => {
-    setTab(newValue);
-  };
-
   return (
     <div>
-      <CssBaseline />
-      <Container>
-        {/* tabs */}
-        <Tabs value={tab} onChange={handleChange} aria-label="tabs"sx={{ mb: 2 }}>
-          {tabs.map((label, index) => (
-            <Tab key={index} label={label} value={index} />
-          ))}
-        </Tabs>
-        {/* ------ tabs panel ------ */}
-        {/* Simple input */}
-        {tab === 0 && <TextEditor placeholder='Type something here...' />}
-
-      </Container>
+      {parseHtml(html)}
+      <HtmlCodeParser
+        language="typescript"
+        codeContainerClassName="custom-class"
+      >
+        {html}
+      </HtmlCodeParser>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
