@@ -14,7 +14,7 @@ Before filing a bug, please confirm that you have:
 
 ### To Reproduce
 
-Please include a CodeSandbox demo of the problem if possible. (You can fork [this CodeSandbox](https://codesandbox.io/s/github/tiavina-mika/mui-tiptap-editor-bug-template).)
+Please include a CodeSandbox demo of the problem if possible. (You can fork [this CodeSandbox](https://codesandbox.io/p/github/tiavina-mika/html-code-parser-demo).)
 
 Steps to reproduce the behavior:
 
