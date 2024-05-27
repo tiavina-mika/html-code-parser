@@ -44,7 +44,7 @@ const getOptions = (language: string, codeContainerClassName?: string): HTMLReac
         const tree = lowlight.highlight(language, codeStr);
         return (
           // editor container
-          <code className={`hljs code ${codeContainerClassName}`} {...props}>
+          <code className={`hljs code-container ${codeContainerClassName}`} {...props}>
             {parse(toHtml(tree))}
           </code>
         );
