@@ -13,7 +13,6 @@ import './index.css';
 import parse, { HTMLReactParserOptions, DOMNode, Element, attributesToProps, domToReact } from 'html-react-parser';
 import { common, createLowlight } from 'lowlight'
 import { toHtml } from 'hast-util-to-html'
-import { HtmlCodeParserOptions } from './type';
 
 const lowlight = createLowlight(common);
 
@@ -54,7 +53,18 @@ const getOptions = (language: string, codeContainerClassName?: string): HTMLReac
   }
 };
 
-
+export type HtmlCodeParserOptions = {
+  /*
+  *
+  * Specify the programming language of the code snippet that
+  * will be displayed in the `ReadOnlyTextCodeEditor` component. By default, the `language` prop is set to
+  * `'jsx'`, but it can be overridden when using the component by passing a different language value.
+  *
+  * for more language options, visit: https://github.com/wooorm/lowlight?tab=readme-ov-file#data
+  */
+  language?: string;
+  codeContainerClassName?: string;
+};
 
 const parseHtml = (
   /**
