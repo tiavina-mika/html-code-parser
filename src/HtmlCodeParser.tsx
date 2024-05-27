@@ -20,7 +20,11 @@ export type HtmlCodeParserProps = {
 } & HtmlCodeParserOptions;
 
 const HtmlCodeParser = ({ codeContainerClassName, language, children }: HtmlCodeParserProps) => {
-  return parseHtml(children, { codeContainerClassName, language })
+  return (
+    <>
+      {parseHtml(children, { codeContainerClassName, language })}
+    </>
+  )
 }
 
 export default HtmlCodeParser;
