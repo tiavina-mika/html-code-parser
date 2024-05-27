@@ -1,11 +1,8 @@
 export {
   default as parseHtml,
+  type HtmlCodeParserOptions,
 } from './Parse';
 export {
   default as HtmlCodeParser,
-} from './HtmlCodeParser';
-
-export {
-  type HtmlCodeParserOptions,
   type HtmlCodeParserProps,
-} from './type.d';
+} from './HtmlCodeParser';
