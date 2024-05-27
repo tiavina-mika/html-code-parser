@@ -1,6 +1,6 @@
 {
   "name": "html-code-parser",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "HTML parser to React component built on the top of html-react-parser with code syntax highlighting",
   "keywords": [
     "tiptap",
@@ -53,7 +53,7 @@
     "copy-files": "copyfiles -u 1 src/*.css dist/",
     "copy-files-esm": "copyfiles -u 1 src/*.css dist/esm",
     "clean-cache": "yarn cache clean --all",
-    "example": "cd example && yarn upgrade && rimraf ./example/node_modules && rimraf ./example/yarn.lock && rimraf ./example/package-lock.json && yarn && yarn dev"
+    "example": "cd example && yarn upgrade && rimraf ./example/node_modules && yarn && yarn dev"
   },
   "dependencies": {
     "hast-util-to-html": "^9.0.1",
