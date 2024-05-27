@@ -2,7 +2,7 @@
 
 <p  align="center">
 
-<b>html-code-parser</b>: HTML parser to React component built on the top of  <a href="https://tiptap.dev/">html-react-parser</a> with code syntax highlighting.
+<b>html-code-parser</b>: HTML parser to React component built on the top of  <a href="https://www.npmjs.com/package/html-react-parser">html-react-parser</a> with code syntax highlighting.
 
 </p>
 
@@ -25,7 +25,7 @@
 
 ## Demo
 
-Try it yourself in this **[CodeSandbox live demo](https://codesandbox.io/s/github/tiavina-mika/mui-tiptap-editor-demo)**
+Try it yourself in this **[CodeSandbox live demo](https://codesandbox.io/p/github/tiavina-mika/html-code-parser-demo)**
 
 <img alt="Screenshot" src="https://github.com/tiavina-mika/mui-tiptap-editor/blob/main/screenshots/screenshot.png" />
 
