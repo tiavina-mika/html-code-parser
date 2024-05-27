@@ -1,6 +1,6 @@
 {
   "name": "html-code-parser",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "HTML parser to React component built on the top of html-react-parser with code syntax highlighting",
   "keywords": [
     "tiptap",
@@ -11,7 +11,9 @@
     "quill",
     "draftjs",
     "slate",
-    "html string to react"
+    "html string to react",
+    "html-react-parser",
+    "code editor"
   ],
   "homepage": "https://github.com/tiavina-mika/html-code-parser",
   "bugs": {
@@ -26,19 +28,7 @@
   "type": "module",
   "types": "./dist/index.d.ts",
   "main": "dist/index.js",
-  "module": "dist/esm/index.js",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/esm/index.js"
-    },
-    "./icons": {
-      "types": "./dist/icons/index.d.ts",
-      "require": "./dist/icons/index.js",
-      "import": "./dist/esm/icons/index.js"
-    }
-  },
+  "module": "dist/es/index.js",
   "files": [
     "/dist"
   ],
@@ -48,7 +38,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev": "vite",
-    "build": "yarn clean && tsc --project tsconfig.build.json && tsc --project tsconfig.build-esm.json && yarn copy-files && yarn copy-files-esm",
+    "build": "yarn clean && vite build",
     "prepare": "npm run build",
     "preview": "vite preview",
     "type:check": "tsc --noEmit",
@@ -63,7 +53,7 @@
     "copy-files": "copyfiles -u 1 src/*.css dist/",
     "copy-files-esm": "copyfiles -u 1 src/*.css dist/esm",
     "clean-cache": "yarn cache clean --all",
-    "example": "cd example && yarn upgrade && rimraf ./example/node_modules && yarn && yarn dev"
+    "example": "cd example && yarn upgrade && rimraf ./example/node_modules && rimraf ./example/yarn.lock && rimraf ./example/package-lock.json && yarn && yarn dev"
   },
   "dependencies": {
     "hast-util-to-html": "^9.0.1",
@@ -108,6 +98,7 @@
     "semantic-release": "^23.0.8",
     "typescript": "^5.2.2",
     "vite": "5.0.8",
+    "vite-plugin-dts": "^3.9.1",
     "vite-tsconfig-paths": "^4.3.1"
   },
   "packageManager": "yarn@4.2.1"
